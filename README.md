@@ -1,19 +1,50 @@
 # zautoload plugin
 
-    (intended for Oh-My-Zsh)
+## Table of Contents
 
-## This plugin will automatically load any Zsh config files located in your user's Zsh configuration directory (usually the user's home directory).
+- [Installation](#installation)
+- [Plugin Usage](#usage)
 
-### The files MUST follow this naming convention:
+### Join me here: [OWLsec Community Discord Server](https://discord.gg/owlsec)
 
-- `.p10k.zsh`
-- `.functions.zsh`
-- `.(file_name).zsh`
+- **This server is for anyone with an interest in Programming and CyberSecurity!**
 
+## Plugin Information
 
-## Benefits
+|          |                                                 |
+| :------: | :---------------------------------------------: |
+| Plugin:  |                  **zautoload**                  |
+| Author:  |                   **Doc0x1**                    |
+|  Type:   | [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) |
+| Version: |                    **1.0.0**                    |
+| License: |                     **MIT**                     |
+|          |                                                 |
 
-### Now, rather than adding lines like the following to your .zshrc file:
+## This plugin will automatically load any Zsh config files located in your user's Zsh configuration directory.
+
+The files MUST follow the `.<name>.zsh` naming convention, examples:
+
+> `/home/user/.<name>.zsh`
+
+> `$ZDOTDIR/.<name>.zsh`
+
+## Installation
+
+1. ### Simply clone the repo to your ohmyzsh plugin folder:
+
+```bash
+git clone --depth=1 https://Doc0x1/zautoload $ZSH/custom/plugins/zautoload
+```
+
+2. ### Add zautoload to your .zshrc file like so:
+
+```bash
+plugins=(...otherplugins zautoload)
+```
+
+## Usage
+
+#### Now, rather than adding lines like the following to your .zshrc file:
 
 ```bash
 # ~/.zshrc
@@ -27,15 +58,6 @@
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-### You can instead allow this plugin to load these configuration files for you! It will even avoid loading `.p10k.zsh` if the ZSH_THEME is not set to powerlevel10k/powerlevel10k!
+#### This plugin will load these configuration files for you.
 
-## Installation
-
-1. ### Simply clone the repo to your ohmyzsh plugin folder:
-   ```bash
-   git clone --depth=1 https://Doc0x1/zautoload $ZSH/custom/plugins/zautoload
-   ```
-2. ### Add zautoload to your .zshrc plugins
-   ```bash
-   plugins=(...other_plugins zautoload)
-   ```
+- Note: It will only load `.p10k.zsh` if `$ZSH_THEME` is `powerlevel10k/powerlevel10k`
