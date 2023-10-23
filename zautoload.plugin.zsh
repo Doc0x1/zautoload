@@ -11,7 +11,7 @@ if [ -n "$ZDOTDIR" ]; then
 fi
 
 # Define an array of files to exclude
-exclude_files=(".zshrc" ".zprofile" ".zlogin" ".zlogout" ".zshenv" ".zshhistory")
+exclude_files=(".zshrc" ".zprofile" ".zlogin" ".zlogout" ".zshenv" ".zsh_history")
 
 # If the powerlevel10k theme is not in use, add .p10k.zsh to the exclude list
 if [ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]; then
