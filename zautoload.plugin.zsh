@@ -19,7 +19,7 @@ if [ "$ZSH_THEME" != "powerlevel10k/powerlevel10k" ]; then
 fi
 
 # Iterate through all the files in the source directory
-for file in $file_source_directory/.*; do
+for file in "$file_source_directory"/.*; do
   # Extract only the filename from the full path
   filename=$(basename -- "$file")
 
@@ -32,7 +32,7 @@ for file in $file_source_directory/.*; do
 
     # Source files that start with a dot and end with ".zsh"
     if [[ $filename == .*\.zsh ]]; then
-      source $file
+      source "$file"
     fi
   fi
 done
